@@ -100,19 +100,19 @@ public class MainActivity extends AppCompatActivity {
 
         RadioButton radioButton = findViewById(R.id.radioButton);
         radioButton.setText(answerOptions[0]);
-        radioButton.setBackgroundResource(R.drawable.bg_radio); // Mengatur latar belakang ke bg_radio
+        radioButton.setBackgroundResource(R.drawable.bg_radio);
 
         RadioButton radioButton2 = findViewById(R.id.radioButton2);
         radioButton2.setText(answerOptions[1]);
-        radioButton2.setBackgroundResource(R.drawable.bg_radio); // Mengatur latar belakang ke bg_radio
+        radioButton2.setBackgroundResource(R.drawable.bg_radio);
 
         RadioButton radioButton3 = findViewById(R.id.radioButton3);
         radioButton3.setText(answerOptions[2]);
-        radioButton3.setBackgroundResource(R.drawable.bg_radio); // Mengatur latar belakang ke bg_radio
+        radioButton3.setBackgroundResource(R.drawable.bg_radio);
 
         RadioButton radioButton4 = findViewById(R.id.radioButton4);
         radioButton4.setText(answerOptions[3]);
-        radioButton4.setBackgroundResource(R.drawable.bg_radio); // Mengatur latar belakang ke bg_radio
+        radioButton4.setBackgroundResource(R.drawable.bg_radio);
 
         int selectedAnswer = selectedAnswers[currentQuestionIndex];
         if (selectedAnswer >= 0) {
@@ -151,13 +151,12 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 jawabanSalah();
                 Button nextButton = findViewById(R.id.nextButton);
-                nextButton.setEnabled(false); // Menonaktifkan tombol "Next" ketika jawaban salah
+                nextButton.setEnabled(false);
                 setButtonDisabledStyle(nextButton);
             }
 
             boolean isAnswerSelected = true;
 
-            // Mengatur latar belakang tombol radio berdasarkan status (dipilih atau tidak)
             for (int i = 0; i < radioGroup.getChildCount(); i++) {
                 RadioButton radioButton = (RadioButton) radioGroup.getChildAt(i);
                 if (radioButton.isChecked()) {
@@ -267,7 +266,6 @@ public class MainActivity extends AppCompatActivity {
 
             setQuestion(currentQuestionIndex);
 
-            // Periksa apakah tombol "Previous" harus dinonaktifkan
             Button previousButton = findViewById(R.id.previousButton);
             if (currentQuestionIndex == 0) {
                 previousButton.setEnabled(false);
@@ -318,10 +316,8 @@ public class MainActivity extends AppCompatActivity {
         Arrays.fill(selectedAnswers, -1);
         setQuestion(currentQuestionIndex);
 
-        // Menghapus pilihan RadioButton
         radioGroup.clearCheck();
 
-        // Mengatur ulang latar belakang RadioButton ke bg_radio
         for (int i = 0; i < radioGroup.getChildCount(); i++) {
             RadioButton radioButton = (RadioButton) radioGroup.getChildAt(i);
             radioButton.setBackgroundResource(R.drawable.bg_radio);
