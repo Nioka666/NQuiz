@@ -1,6 +1,6 @@
 # NQuiz
 
-NQuiz is a simple quiz application created using Android Studio. This app allows users to test their knowledge through interactive quizzes.
+NQuiz is a simple mobile quiz application created using Android Studio. This app allows users to test their knowledge through interactive quizzes.
 
 ## Description
 
