@@ -260,7 +260,6 @@ public class MainActivity extends AppCompatActivity {
     public void movePreviousQuestion(View view) {
         if (currentQuestionIndex > 0) {
             currentQuestionIndex--;
-            // Kembalikan pilihan radio jika ada yang tersimpan
             int selectedAnswerIndex = selectedAnswers[currentQuestionIndex];
             if (selectedAnswerIndex >= 0) {
                 radioGroup.check(selectedAnswerIndex);
