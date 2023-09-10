@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="10dp"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
+        android:minHeight="150sp">
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:foregroundGravity="center_horizontal"
+            android:text="NQuiz"
+            android:textColor="#FFFFFF"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="160dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appTitle"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_bold"
+            android:lineSpacingExtra="-4sp"
+            android:padding="28dp"
+            android:text="Club sepak bola yang memenangkan liga champions adalah :"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling" />
+
+    </androidx.cardview.widget.CardView>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="299dp"
+        android:layout_marginRight="25dp"
+        android:elevation="3sp"
+        android:paddingBottom="20dp"
+        tools:ignore="NotSibling">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radio_selector"
+            android:button="@drawable/bg_radio"
+            android:elevation="1.5sp"
+            android:onClick="onRadioButton"
+            android:paddingLeft="28dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:text="Real Madrid"
+            android:textColor="#5A5A5A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_below="@id/radioButton"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radio_selector"
+            android:button="@drawable/bg_radio"
+            android:elevation="1.5sp"
+            android:onClick="onRadioButton"
+            android:paddingLeft="28dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:text="Liverpool"
+            android:textColor="#5A5A5A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_below="@id/radioButton2"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radio_selector"
+            android:button="@drawable/bg_radio"
+            android:elevation="1.5sp"
+            android:onClick="onRadioButton"
+            android:paddingLeft="28dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:text="Barcelona"
+            android:textColor="#5A5A5A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_below="@id/radioButton3"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radio_selector"
+            android:button="@drawable/bg_radio"
+            android:elevation="1.5sp"
+            android:onClick="onRadioButton"
+            android:paddingLeft="28dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:text="Juventus"
+            android:textColor="#5A5A5A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="660dp"
+        android:background="@drawable/rounded_bottom"
+        android:elevation="9dp"
+        android:minHeight="150sp">
+
+        <Button
+            android:id="@+id/previousButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/lightPrimary"
+            android:elevation="10dp"
+            android:onClick="previousQuestion"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Previous"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="40dp"
+            tools:ignore="UnknownId" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="35dp"
+            android:backgroundTint="@color/lightPrimary"
+            android:onClick="nextQuestion"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:text="Next"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="40dp"
+            tools:ignore="UnknownId" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<!-- res/drawable/bg_radio.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#F1F1F1" />
+    <corners android:radius="20dp" />
+</shape>

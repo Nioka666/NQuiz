@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- radio_button_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/primary" />
+    <corners android:topLeftRadius="0dp"
+    android:topRightRadius="0dp"
+    android:bottomLeftRadius="18dp"
+    android:bottomRightRadius="18dp" />
+</shape>
+
+
