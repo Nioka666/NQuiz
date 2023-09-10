@@ -222,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
                     fadeIn.setDuration(400);
                     findViewById(R.id.textView).startAnimation(fadeIn);
 
-                    // Periksa apakah sudah mencapai halaman terakhir dan sesuaikan tampilan tombol "Next" dan "Previous"
                     Button previousButton = findViewById(R.id.previousButton);
                     previousButton.setEnabled(true);
                     setButtonEnabledStyle(previousButton);
